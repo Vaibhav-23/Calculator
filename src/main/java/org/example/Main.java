@@ -56,7 +56,7 @@ public class Main {
 
                     case 3: // Natural Log
                         System.out.println("You choose Natural Log!!");
-                        System.out.println(" ");
+                        System.out.println("");
                         System.out.print("Enter number: ");
                         num1 = reader.nextDouble();
                         naturalLog(num1);
