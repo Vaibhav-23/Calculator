@@ -11,8 +11,7 @@ public class Main {
         logger.info("The world's first unscientific calculator. Now with many DevOps tools behind it");
         Scanner reader = new Scanner(System.in);
         int op, flag = 0;
-        double num, exp;
-        int numm;
+        double num1, num2;
 
         do {
             System.out.println("------------Calculator--------------");
@@ -27,86 +26,130 @@ public class Main {
             System.out.println("7. Tangent");
             System.out.println("8. Exponential");
             System.out.println("9. Absolute Value");
-            System.out.println("10. Exit");
+            System.out.println("10. Addition");
+            System.out.println("11. Subtraction");
+            System.out.println("12. Multiplication");
+            System.out.println("13. Division");
+            System.out.println("14. Exit");
             System.out.println("");
             System.out.print("Enter your choice(number): ");
             System.out.println("");
             op = reader.nextInt();
-            if (op == 10) flag = 1;
+            if (op == 14) flag = 1;
             else {
                 switch (op) {
                     case 1:  // Square Root
                         System.out.println("You choose Square Root!!");
                         System.out.println("");
                         System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        squareRoot(num);
+                        num1 = reader.nextDouble();
+                        squareRoot(num1);
                         break;
 
                     case 2: // Factorial
                         System.out.println("You choose Factorial!!");
                         System.out.println("");
                         System.out.print("Enter number: ");
-                        numm = reader.nextInt();
-                        factorial(numm);
+                        int num = reader.nextInt();
+                        factorial(num);
                         break;
 
                     case 3: // Natural Log
                         System.out.println("You choose Natural Log!!");
                         System.out.println(" ");
                         System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        naturalLog(num);
+                        num1 = reader.nextDouble();
+                        naturalLog(num1);
                         break;
 
                     case 4: // Power
                         System.out.println("You choose Power!!");
                         System.out.println("");
-                        System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        System.out.print("exponent: ");
-                        exp = reader.nextDouble();
-                        power(num, exp);
+                        System.out.print("Enter base: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter exponent: ");
+                        double exp = reader.nextDouble();
+                        power(num1, exp);
                         break;
 
                     case 5: // Sine
                         System.out.println("You choose Sine!!");
                         System.out.println("");
-                        System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        sine(num);
+                        System.out.print("Enter angle in radians: ");
+                        num1 = reader.nextDouble();
+                        sine(num1);
                         break;
 
                     case 6: // Cosine
                         System.out.println("You choose Cosine!!");
                         System.out.println("");
-                        System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        cosine(num);
+                        System.out.print("Enter angle in radians: ");
+                        num1 = reader.nextDouble();
+                        cosine(num1);
                         break;
 
                     case 7: // Tangent
                         System.out.println("You choose Tangent!!");
                         System.out.println("");
-                        System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        tangent(num);
+                        System.out.print("Enter angle in radians: ");
+                        num1 = reader.nextDouble();
+                        tangent(num1);
                         break;
 
                     case 8: // Exponential
                         System.out.println("You choose Exponential!!");
                         System.out.println("");
                         System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        exponential(num);
+                        num1 = reader.nextDouble();
+                        exponential(num1);
                         break;
 
                     case 9: // Absolute Value
                         System.out.println("You choose Absolute Value!!");
                         System.out.println("");
                         System.out.print("Enter number: ");
-                        num = reader.nextDouble();
-                        absoluteValue(num);
+                        num1 = reader.nextDouble();
+                        absoluteValue(num1);
+                        break;
+
+                    case 10: // Addition
+                        System.out.println("You choose Addition!!");
+                        System.out.println("");
+                        System.out.print("Enter first number: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter second number: ");
+                        num2 = reader.nextDouble();
+                        addition(num1, num2);
+                        break;
+
+                    case 11: // Subtraction
+                        System.out.println("You choose Subtraction!!");
+                        System.out.println("");
+                        System.out.print("Enter first number: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter second number: ");
+                        num2 = reader.nextDouble();
+                        subtraction(num1, num2);
+                        break;
+
+                    case 12: // Multiplication
+                        System.out.println("You choose Multiplication!!");
+                        System.out.println("");
+                        System.out.print("Enter first number: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter second number: ");
+                        num2 = reader.nextDouble();
+                        multiplication(num1, num2);
+                        break;
+
+                    case 13: // Division
+                        System.out.println("You choose Division!!");
+                        System.out.println("");
+                        System.out.print("Enter numerator: ");
+                        num1 = reader.nextDouble();
+                        System.out.print("Enter denominator: ");
+                        num2 = reader.nextDouble();
+                        division(num1, num2);
                         break;
 
                     default:
@@ -202,6 +245,46 @@ public class Main {
         System.out.println("The Result is " + c);
         System.out.println("");
         logger.info("Executing Absolute Value function!");
+        return c;
+    }
+
+    public static double addition(double num1, double num2) {
+        double c = num1 + num2;
+        System.out.println("");
+        System.out.println("The Result is " + c);
+        System.out.println("");
+        logger.info("Executing Addition function!");
+        return c;
+    }
+
+    public static double subtraction(double num1, double num2) {
+        double c = num1 - num2;
+        System.out.println("");
+        System.out.println("The Result is " + c);
+        System.out.println("");
+        logger.info("Executing Subtraction function!");
+        return c;
+    }
+
+    public static double multiplication(double num1, double num2) {
+        double c = num1 * num2;
+        System.out.println("");
+        System.out.println("The Result is " + c);
+        System.out.println("");
+        logger.info("Executing Multiplication function!");
+        return c;
+    }
+
+    public static double division(double num1, double num2) {
+        if (num2 == 0) {
+            System.out.println("Error: Division by zero");
+            return Double.NaN;
+        }
+        double c = num1 / num2;
+        System.out.println("");
+        System.out.println("The Result is " + c);
+        System.out.println("");
+        logger.info("Executing Division function!");
         return c;
     }
 }
