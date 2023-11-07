@@ -8,7 +8,7 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
-        logger.info("T world's first unscientific calculator. Now with many DevOps tools behind it");
+        logger.info("The world's first unscientific calculator. Now with many DevOps tools behind it");
         Scanner reader = new Scanner(System.in);
         int op, flag = 0;
         double num, exp;
