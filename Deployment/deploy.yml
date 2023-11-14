@@ -7,4 +7,4 @@
     - name: Pull image
       shell: docker pull vaibhav2107/calculator:latest
     - name: Running container
-      shell: docker run -it -d --name Calculator2 vaibhav2107/calculator
+      shell: docker run -it -d --name Calculator vaibhav2107/calculator
